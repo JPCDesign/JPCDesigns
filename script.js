@@ -1,62 +1,51 @@
 
-const menuButton = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.nav-links');
-if (menuButton && menu) {
-  menuButton.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(isOpen));
+const menuButton = document.querySelector(".menu-button");
+const siteNav = document.querySelector(".site-nav");
+
+if (menuButton && siteNav) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
   });
 }
 
-const bookingForm = document.getElementById('booking-form');
-if (bookingForm) {
-  const dateField = bookingForm.elements.date;
-  const today = new Date();
-  dateField.min = today.toISOString().split('T')[0];
+const dateInput = document.querySelector('input[type="date"]');
+if (dateInput) {
+  const now = new Date();
+  const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+  dateInput.min = local.toISOString().slice(0, 10);
+}
 
-  const params = new URLSearchParams(window.location.search);
-  const requestedService = params.get('service');
-  if (requestedService) bookingForm.elements.service.value = requestedService;
+const params = new URLSearchParams(window.location.search);
+const requestedService = params.get("service");
+const serviceSelect = document.querySelector('select[name="service"]');
+if (requestedService && serviceSelect) {
+  serviceSelect.value = requestedService;
+}
 
-  dateField.addEventListener('change', () => {
-    if (!dateField.value) return;
-    const selected = new Date(dateField.value + 'T12:00:00');
-    const day = selected.getDay();
-    if (day === 0 || day === 6) {
-      dateField.setCustomValidity('Please choose a Monday through Friday date.');
-    } else {
-      dateField.setCustomValidity('');
-    }
-  });
+const form = document.querySelector("#booking-form");
+const note = document.querySelector("#form-note");
 
-  bookingForm.addEventListener('submit', event => {
+if (form) {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (!bookingForm.reportValidity()) return;
-
-    const data = new FormData(bookingForm);
-    const selected = new Date(String(data.get('date')) + 'T12:00:00');
-    if (selected.getDay() === 0 || selected.getDay() === 6) {
-      bookingForm.querySelector('.form-status').textContent = 'Please choose a Monday through Friday date.';
-      return;
+    const data = new FormData(form);
+    const details = [
+      `Name: ${data.get("name")}`,
+      `Email: ${data.get("email")}`,
+      `Phone: ${data.get("phone")}`,
+      `Service: ${data.get("service")}`,
+      `Preferred date: ${data.get("date")}`,
+      `Preferred time: ${data.get("time")}`,
+      `Location: ${data.get("location") || ""}`,
+      "",
+      `Project notes: ${data.get("message")}`,
+    ].join("\n");
+    const subject = encodeURIComponent("JPC Design consultation request");
+    const body = encodeURIComponent(details);
+    window.location.href = `mailto:jpcdesign1996@gmail.com?subject=${subject}&body=${body}`;
+    if (note) {
+      note.textContent = "Your email app is opening with the request details ready to send.";
     }
-
-    const subject = `JPC Design booking request — ${data.get('service')}`;
-    const body = [
-      `Name: ${data.get('name')}`,
-      `Email: ${data.get('email')}`,
-      `Phone: ${data.get('phone')}`,
-      `Service: ${data.get('service')}`,
-      `Preferred date: ${data.get('date')}`,
-      `Preferred time: ${data.get('time')}`,
-      `Property city/address: ${data.get('location') || 'Not provided'}`,
-      '',
-      'Project details:',
-      data.get('message'),
-      '',
-      'Please confirm whether this appointment time is available.'
-    ].join('\n');
-
-    bookingForm.querySelector('.form-status').textContent = 'Opening your email application with the booking request…';
-    window.location.href = `mailto:jpcdesign1996@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
