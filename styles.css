@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f3eee8;
+  font-family: Arial, sans-serif;
+}
+
+.site-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: #f3eee8;
+  box-shadow: 0 20px 80px rgba(0,0,0,.18);
+}
+
+.homepage-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Clickable areas over the mockup buttons */
+.hotspot {
+  position: absolute;
+  display: block;
+  z-index: 5;
+}
+
+.consultation-top {
+  top: 1.85%;
+  right: 2.8%;
+  width: 15.2%;
+  height: 2.75%;
+}
+
+.consultation-hero {
+  top: 28.3%;
+  left: 4.05%;
+  width: 14.7%;
+  height: 2.75%;
+}
+
+.consultation-footer {
+  bottom: 6.7%;
+  left: 12.75%;
+  width: 24%;
+  height: 2.8%;
+}
+
+@media (max-width: 800px) {
+  .site-wrap {
+    max-width: 100%;
+    box-shadow: none;
+  }
+}
