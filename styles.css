@@ -100,6 +100,15 @@ a {
   color: var(--ink);
 }
 
+.site-nav a,
+.button,
+.menu-button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: rgba(184, 138, 69, 0.18);
+}
+
 .menu-button {
   display: none;
   border: 1px solid var(--line);
@@ -518,6 +527,7 @@ textarea {
   color: var(--ink);
   background: var(--white);
   font: inherit;
+  font-size: 16px;
 }
 
 textarea {
@@ -585,6 +595,7 @@ textarea {
   .site-header {
     align-items: center;
     min-height: 68px;
+    padding-inline: 16px;
   }
 
   .brand-mark {
@@ -654,11 +665,74 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .intro-band,
+  .cta,
+  .section,
+  .page-hero,
+  .feature-project,
+  .wide-image {
+    padding-inline: 16px;
+  }
+
   .site-footer {
     grid-template-columns: 1fr;
   }
 
   .site-footer a {
     text-align: left;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand small {
+    font-size: 0.7rem;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+    font-size: 0.88rem;
+  }
+
+  .hero {
+    min-height: calc(88svh - 68px);
+    background-position: 62% center;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: clamp(2.45rem, 14vw, 3.7rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 9vw, 2.65rem);
+  }
+
+  .button {
+    width: 100%;
+    min-height: 50px;
+    padding-inline: 14px;
+    text-align: center;
+  }
+
+  .service-grid article,
+  .portfolio-card,
+  .package-card,
+  .process-grid article,
+  .values-grid article,
+  .contact-panel {
+    box-shadow: 0 8px 24px rgba(22, 21, 18, 0.08);
+  }
+
+  .portfolio-card div,
+  .package-card,
+  .process-grid article,
+  .values-grid article,
+  .contact-panel {
+    padding: 20px;
+  }
+
+  .portfolio-card img {
+    aspect-ratio: 1.18;
   }
 }
