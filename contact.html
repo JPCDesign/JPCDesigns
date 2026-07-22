@@ -1,6 +1,99 @@
-<!DOCTYPE html><html><body><h1>Contact JPC Design</h1>
-<p><strong>Phone:</strong> 727-303-8715</p>
-<p><strong>Email:</strong> jpcdesign1996@gmail.com</p>
-<p><strong>Service Area:</strong> Tampa Bay Area, Florida</p>
-<p>Schedule a consultation today to begin transforming your home.</p>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Free Introduction | JPC Design</title>
+  <meta name="description" content="Request a free JPC Design introduction Monday through Friday from 10 AM to 6 PM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="JPC Design home">
+    <span class="brand-monogram">JPC</span>
+    <span class="brand-copy"><strong>JPC Design</strong><small>Tampa Bay Interior Design</small></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Before &amp; After</a>
+    <a href="packages.html">Packages</a>
+    <a href="process.html">Process</a>
+    <a href="about.html">About</a>
+    <a class="nav-button" href="contact.html">Book Free Intro</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <p class="eyebrow">Book Your Free Introduction</p>
+  <h1>Choose a preferred date and full-hour time.</h1>
+  <p>Appointments are available Monday through Friday, from 10:00 AM through 6:00 PM. Your appointment is confirmed after JPC Design replies.</p>
+</section>
+<section class="section booking-layout">
+  <form id="booking-form" class="booking-form">
+    <div class="form-grid">
+      <label>Full name<input name="name" required autocomplete="name"></label>
+      <label>Email<input name="email" required type="email" autocomplete="email"></label>
+      <label>Phone<input name="phone" required type="tel" autocomplete="tel"></label>
+      <label>Service of interest
+        <select name="service" required>
+          <option value="">Choose a service</option>
+          <option>Free Introduction</option>
+          <option>Design Consultation</option>
+          <option>Single Room Design</option>
+          <option>Multiple Room Design</option>
+          <option>Full Home Design</option>
+          <option>Move-In Concierge</option>
+        </select>
+      </label>
+      <label>Preferred date<input name="date" required type="date"></label>
+      <label>Preferred time
+        <select name="time" required>
+          <option value="">Choose a time</option>
+          <option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option>
+          <option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option>
+          <option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option>
+        </select>
+      </label>
+    </div>
+    <label>Property city or address<input name="location" placeholder="Tampa, Riverview, Brandon, etc."></label>
+    <label>Tell us about the project<textarea name="message" required rows="6" placeholder="Which rooms need help? Are you moving into a new home? What style do you prefer?"></textarea></label>
+    <button class="button gold" type="submit">Send booking request</button>
+    <p class="form-note">The first introduction is free. Submitting this form requests a time; it does not create an automatic confirmed appointment.</p>
+    <p class="form-status" aria-live="polite"></p>
+  </form>
+  <aside class="booking-aside">
+    <p class="eyebrow">Availability</p>
+    <h2>Monday–Friday<br>10:00 AM–6:00 PM</h2>
+    <p>Appointments are offered every full hour.</p>
+    <hr>
+    <p><strong>First introduction:</strong><br>No cost</p>
+    <p><strong>Email:</strong><br><a href="mailto:jpcdesign1996@gmail.com">jpcdesign1996@gmail.com</a></p>
+    <p><strong>Service area:</strong><br>Tampa Bay and surrounding communities</p>
+  </aside>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div>
+    <strong>JPC Design</strong>
+    <p>Interior design, furnishing and move-in support across Tampa Bay.</p>
+  </div>
+  <div class="footer-links">
+    <a href="mailto:jpcdesign1996@gmail.com">jpcdesign1996@gmail.com</a>
+    <a href="contact.html">Book a free introduction</a>
+  </div>
+  <p class="copyright">© 2026 JPC Design. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
