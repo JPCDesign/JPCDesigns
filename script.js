@@ -50,8 +50,24 @@ if (bookingForm) {
       });
 
       if (response.ok) {
-        window.location.href = "/thank-you.html";
-        return;
+  const formData = Object.fromEntries(
+    new FormData(bookingForm).entries()
+  );
+
+  try {
+    await fetch("https://eoood29yfydq3s42.m.pipedream.net", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+     body: JSON.stringify(formData)
+    });
+  } catch (automationError) {
+    console.error("Confirmation automation failed:", automationError);
+  }
+
+  window.location.href = "/thank-you.html";
+  return;
       }
 
       if (formNote) {
