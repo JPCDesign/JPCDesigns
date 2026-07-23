@@ -138,10 +138,12 @@ textarea {
 .page-hero h1 {
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(3.3rem, 9vw, 7.8rem);
+  font-size: clamp(2.5rem, 7vw, 5rem);
   line-height: 0.92;
   letter-spacing: 0;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
 }
 
 .hero p {
