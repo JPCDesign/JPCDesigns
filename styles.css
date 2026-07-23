@@ -736,3 +736,14 @@ textarea {
     aspect-ratio: 1.18;
   }
 }
+/* Mobile Portfolio Heading Fix */
+@media (max-width: 768px) {
+  .portfolio-hero h1,
+  .portfolio h1,
+  .portfolio-header h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem) !important;
+    line-height: 1.05 !important;
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;  }
+}
