@@ -23,4 +23,9 @@ if (requestedService && serviceSelect) {
   serviceSelect.value = requestedService;
 }
 
-
+<form
+  class="booking-form"
+  id="booking-form"
+  action="https://formspree.io/f/xqeryagp"
+  method="POST"
+>
