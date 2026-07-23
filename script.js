@@ -23,3 +23,49 @@ if (requestedService && serviceSelect) {
   serviceSelect.value = requestedService;
 }
 
+const bookingForm = document.querySelector("#booking-form");
+const formNote = document.querySelector("#form-note");
+
+if (bookingForm) {
+  bookingForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = bookingForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    if (formNote) {
+      formNote.textContent = "";
+    }
+
+    try {
+      const response = await fetch(bookingForm.action, {
+        method: "POST",
+        body: new FormData(bookingForm),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        window.location.href = "/thank-you.html";
+        return;
+      }
+
+      if (formNote) {
+        formNote.textContent =
+          "We could not send your request. Please check your information and try again.";
+      }
+    } catch (error) {
+      if (formNote) {
+        formNote.textContent =
+          "There was a connection problem. Please try again.";
+      }
+    }
+
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+  });
+}
