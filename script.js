@@ -55,17 +55,14 @@ if (bookingForm) {
   );
 
   try {
-    await fetch("https://eoood29yfydq3s42.m.pipedream.net", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-     body: JSON.stringify(formData)
-    });
-  } catch (automationError) {
-    console.error("Confirmation automation failed:", automationError);
-  }
-
+  await fetch("https://eood29yfydq3s42.m.pipedream.net", {
+    method: "POST",
+    body: new FormData(bookingForm),
+    mode: "no-cors"
+  });
+} catch (automationError) {
+  console.error("Confirmation automation failed:", automationError);
+}
   window.location.href = "/thank-you.html";
   return;
       }
