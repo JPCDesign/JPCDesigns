@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virtual Interior Decoration | JPC Design</title>
+  <meta name="description" content="Upload photos of your room and schedule a complimentary virtual decoration introduction with JPC Design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="JPC Design home">
+    <span class="brand-mark">JPC</span>
+    <span><strong>JPC Design</strong><small>Tampa Bay interior decorator</small></span>
+  </a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+  <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="packages.html">Packages</a><a href="process.html">Process</a><a href="about.html">About</a><a href="contact.html">Book</a>
+  </nav>
+</header>
+<main>
+<section class="page-hero compact virtual-upload-hero">
+  <p class="eyebrow">Virtual interior decoration</p>
+  <h1>Show us your space.</h1>
+  <p>Upload clear photos of the room or area you would like to improve. After the photos are submitted, you will be taken directly to schedule your complimentary virtual introduction.</p>
+</section>
+
+<section class="section upload-layout">
+  <form class="booking-form upload-form" id="virtual-upload-form" method="POST">
+    <input type="hidden" name="_subject" value="New JPC Design virtual decoration photo upload">
+    <input type="hidden" name="service" value="Virtual Interior Decoration">
+
+    <div class="form-grid">
+      <label>Full name<input name="name" required autocomplete="name"></label>
+      <label>Email<input name="email" required type="email" autocomplete="email"></label>
+      <label>Phone<input name="phone" required type="tel" autocomplete="tel"></label>
+      <label>Room or area
+        <select name="room_type" required>
+          <option value="">Choose an area</option>
+          <option>Living room</option><option>Bedroom</option><option>Dining room</option><option>Home office</option><option>Kitchen styling</option><option>Entryway</option><option>Multiple rooms</option><option>Other</option>
+        </select>
+      </label>
+      <label>Approximate furniture & décor budget
+        <select name="budget" required>
+          <option value="">Choose a budget</option>
+          <option>Under $2,500</option><option>$2,500-$5,000</option><option>$5,000-$10,000</option><option>$10,000-$20,000</option><option>$20,000+</option><option>Not sure yet</option>
+        </select>
+      </label>
+      <label>Preferred style
+        <select name="style">
+          <option value="">Choose a style</option><option>Modern</option><option>Contemporary</option><option>Luxury</option><option>Coastal</option><option>Minimalist</option><option>Transitional</option><option>Farmhouse</option><option>Not sure yet</option>
+        </select>
+      </label>
+    </div>
+
+    <label>What would you like to change?
+      <textarea name="message" required rows="5" placeholder="Tell us what is not working, what you want to keep and how you want the room to feel."></textarea>
+    </label>
+
+    <label class="file-upload-box">Upload room photos
+      <span>Choose 1-5 clear JPG, PNG or HEIC photos. Maximum combined size: 10 MB. Include wide views from different corners when possible.</span>
+      <input id="room-photos" name="room_photos" required type="file" accept="image/jpeg,image/png,image/heic,image/heif" multiple>
+      <small id="file-count">No photos selected</small>
+    </label>
+
+    <label class="consent-check"><input type="checkbox" name="photo_permission" value="Yes" required> <span>I confirm that I am authorized to share these photos with JPC Design for consultation purposes.</span></label>
+
+    <button class="button gold" type="submit">Upload photos & schedule introduction</button>
+    <p class="form-note" id="upload-note" role="status"></p>
+  </form>
+
+  <aside class="contact-panel upload-guide">
+    <p class="eyebrow">Photo tips</p>
+    <h2>Help us understand the whole room.</h2>
+    <p><strong>1.</strong> Stand in each corner and take a wide photo.</p>
+    <p><strong>2.</strong> Include doors, windows and furniture you plan to keep.</p>
+    <p><strong>3.</strong> Use good lighting and avoid screenshots when possible.</p>
+    <p><strong>Next step:</strong><br>After a successful upload, the scheduling form opens automatically with Virtual Interior Decoration already selected.</p>
+  </aside>
+</section>
+</main>
+<footer class="site-footer">
+  <div><strong>JPC Design</strong><p>Interior decorator, furnishing and move-in support across Tampa Bay and virtually nationwide.</p></div>
+  <div><a href="tel:+17273038715">727-303-8715</a><a href="mailto:jpcdesign1996@gmail.com">jpcdesign1996@gmail.com</a></div>
+  <p class="copyright">&copy; 2026 JPC Design. All rights reserved.</p>
+</footer>
+<script src="script.js?v=7"></script>
+</body>
+</html>

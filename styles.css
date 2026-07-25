@@ -1019,3 +1019,6 @@ textarea {
     padding-right: 14px;
   }
 }
+
+/* Virtual decoration photo upload */
+.upload-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.75fr);gap:32px;align-items:start}.upload-form{max-width:none}.file-upload-box{display:block;border:1.5px dashed rgba(184,138,69,.75);background:#fbf8f2;padding:22px;border-radius:10px}.file-upload-box>span{display:block;font-weight:400;color:var(--muted);margin:7px 0 14px;line-height:1.55}.file-upload-box input[type=file]{display:block;width:100%;padding:12px;background:#fff;border:1px solid rgba(30,30,30,.14);border-radius:7px}.file-upload-box small{display:block;margin-top:10px;color:var(--muted)}.consent-check{display:flex!important;gap:10px;align-items:flex-start;font-weight:500!important}.consent-check input{width:18px;height:18px;margin-top:3px;flex:0 0 auto}.upload-guide{position:sticky;top:110px}.upload-guide p{line-height:1.65}.upload-form button:disabled{opacity:.65;cursor:not-allowed}@media(max-width:820px){.upload-layout{grid-template-columns:1fr}.upload-guide{position:static}.file-upload-box{padding:17px}}

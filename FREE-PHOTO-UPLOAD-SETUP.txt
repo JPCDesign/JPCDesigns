@@ -1,0 +1,51 @@
+JPC DESIGN — FREE PHOTO-TO-GMAIL SETUP
+======================================
+
+The website files are ready. Complete this one-time Google setup before uploading the website to GitHub.
+
+PART 1 — CREATE THE FREE GOOGLE EMAIL RECEIVER
+1. Sign in to the Google account that owns jpcdesign1996@gmail.com.
+2. Open: https://script.google.com
+3. Click "New project."
+4. Delete the sample code shown in Code.gs.
+5. Open the included file named "Google-Apps-Script-Code.gs" from this website folder.
+6. Copy all of its code and paste it into Google Apps Script.
+7. Click the Save icon and name the project: JPC Website Photo Uploads.
+
+PART 2 — DEPLOY IT
+1. Click "Deploy" in the top-right corner.
+2. Choose "New deployment."
+3. Click the gear icon and select "Web app."
+4. Description: JPC website photo receiver
+5. Execute as: Me
+6. Who has access: Anyone
+7. Click "Deploy."
+8. Google will ask for authorization. Choose your Google account and approve the requested permission.
+9. Copy the Web App URL. It normally ends with /exec.
+
+PART 3 — CONNECT THE WEBSITE
+1. Open script.js.
+2. Find this exact line near the lower half of the file:
+   const JPC_PHOTO_UPLOAD_ENDPOINT = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+3. Replace only the words inside the quotation marks with your copied Web App URL.
+4. Save script.js.
+
+Example:
+const JPC_PHOTO_UPLOAD_ENDPOINT = "https://script.google.com/macros/s/EXAMPLE/exec";
+
+PART 4 — UPLOAD TO GITHUB AND TEST
+1. Upload all website files to the main level of your GitHub repository.
+2. Wait for Cloudflare Pages to deploy the new version.
+3. Open virtual-decoration.html on your live website.
+4. Submit a test using one small room photo.
+5. Confirm:
+   - The photo and details arrive at jpcdesign1996@gmail.com.
+   - The client receives a confirmation email.
+   - The website redirects to the complimentary introduction scheduling form.
+
+IMPORTANT LIMITS
+- Maximum 5 photos.
+- Maximum 5 MB for each photo.
+- Maximum 10 MB combined.
+- This uses Google's free Apps Script and Gmail sending quotas. It is appropriate for a new business receiving a normal number of leads, but it is not designed for high-volume public file storage.
+- Keep the Google Apps Script URL in script.js. It is a receiving endpoint, not your Gmail password or a private API key.
