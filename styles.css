@@ -208,6 +208,17 @@ textarea {
   margin-top: 26px;
 }
 
+.hero-portfolio-button {
+  color: var(--white);
+  border-color: rgba(255,255,255,.62);
+  background: rgba(15,15,15,.20);
+  backdrop-filter: blur(3px);
+}
+
+.hero-portfolio-button:hover {
+  background: rgba(255,255,255,.14);
+}
+
 .intro-band,
 .cta,
 .section,
@@ -1153,5 +1164,102 @@ textarea {
   .virtual-feature-actions .text-link {
     width: 100%;
     text-align: center;
+  }
+}
+
+
+/* FINAL HOMEPAGE VIRTUAL SECTION — cache-busting authoritative rules */
+body .virtual-feature {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .9fr) !important;
+  width: min(1180px, calc(100% - 48px)) !important;
+  min-height: 0 !important;
+  margin: 64px auto !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  color: #201e1a !important;
+  background: #f4efe7 !important;
+  border: 1px solid rgba(32,30,26,.10) !important;
+  box-shadow: 0 18px 55px rgba(32,30,26,.10) !important;
+}
+body .virtual-feature-visual {
+  position: relative !important;
+  min-height: 440px !important;
+  height: 440px !important;
+  background: #d8cec0 !important;
+}
+body .virtual-feature-visual img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  box-shadow: none !important;
+}
+body .virtual-feature-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  padding: 46px 48px !important;
+  background: #f4efe7 !important;
+}
+body .virtual-feature-copy .eyebrow {
+  margin: 0 0 12px !important;
+  color: #9a6b29 !important;
+}
+body .virtual-feature h2 {
+  max-width: 560px !important;
+  margin: 0 0 18px !important;
+  color: #201e1a !important;
+  font-size: clamp(2.15rem, 3.3vw, 3.65rem) !important;
+  line-height: 1.02 !important;
+  overflow-wrap: normal !important;
+}
+body .virtual-feature-copy > p:not(.eyebrow) {
+  max-width: 570px !important;
+  margin: 0 !important;
+  color: #625b52 !important;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+body .virtual-feature-points {
+  margin: 24px 0 26px !important;
+}
+body .virtual-feature-points span {
+  padding: 11px 0 11px 25px !important;
+  font-size: .95rem !important;
+}
+body .virtual-feature .nationwide-note {
+  position: absolute !important;
+  right: 16px !important;
+  bottom: 16px !important;
+  width: auto !important;
+  padding: 12px 15px !important;
+  background: rgba(250,247,242,.94) !important;
+  color: #201e1a !important;
+}
+@media (max-width: 820px) {
+  body .virtual-feature {
+    grid-template-columns: 1fr !important;
+    width: calc(100% - 28px) !important;
+    margin: 36px auto !important;
+  }
+  body .virtual-feature-visual {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  body .virtual-feature-visual img {
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+  body .virtual-feature-copy {
+    padding: 34px 24px 40px !important;
+  }
+  body .virtual-feature h2 {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
   }
 }

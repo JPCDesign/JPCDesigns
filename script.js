@@ -11,9 +11,11 @@ if (menuButton && siteNav) {
 
 const dateInput = document.querySelector('input[type="date"]');
 if (dateInput) {
-  const now = new Date();
-  const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
-  dateInput.min = local.toISOString().slice(0, 10);
+  // Earliest booking is tomorrow, so same-day appointments cannot be selected.
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const localTomorrow = new Date(tomorrow.getTime() - tomorrow.getTimezoneOffset() * 60000);
+  dateInput.min = localTomorrow.toISOString().slice(0, 10);
 }
 
 const params = new URLSearchParams(window.location.search);
