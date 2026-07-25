@@ -90,7 +90,7 @@ const fileCount = document.querySelector("#file-count");
 
 // FREE PHOTO EMAIL SETUP:
 // Paste your deployed Google Apps Script Web App URL between the quotation marks.
-const JPC_PHOTO_UPLOAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbz0p4_wqqqf1qdeu_EdmsVhkadoncNAnKipYdpCA3YqgFz238LFe5_2YSAB_NmHZsgj/exec";
+const JPC_PHOTO_UPLOAD_ENDPOINT = https://script.google.com/macros/s/AKfycbzOp4_wqqqf1qdeU_EdmSVHkadoncNAnKipYdPcA3YqgFz238LFe5_2YSAB_NmHZsgj/exec
 
 if (roomPhotos && fileCount) {
   roomPhotos.addEventListener("change", () => {
