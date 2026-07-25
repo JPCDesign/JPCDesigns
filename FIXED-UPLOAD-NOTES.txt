@@ -1,0 +1,21 @@
+JPC DESIGN PHOTO UPLOAD — FIXED VERSION
+
+The previous website had a JavaScript syntax error: the Google Apps Script URL was not inside quotation marks. Because of that, the browser could not run the photo-upload code and Google received no doPost execution.
+
+This package fixes that error and also:
+- keeps the existing deployed Google Apps Script Web App URL;
+- sends 1–5 room photos to jpcdesign1996@gmail.com;
+- redirects to the complimentary introduction form;
+- carries the client's name, email, phone, and Virtual Interior Decoration service into the booking form;
+- uses script.js?v=12 to prevent Cloudflare/browser caching the broken JavaScript.
+
+UPLOAD:
+1. Upload every file in this folder to the root of the GitHub repository.
+2. Replace the existing files.
+3. Commit the changes.
+4. Wait for Cloudflare Pages to show Success.
+5. Open https://www.jpcdesigns.com/virtual-decoration.html in an InPrivate window.
+6. Test with one small JPG photo.
+
+GOOGLE APPS SCRIPT:
+The included Google-Apps-Script-Code.gs matches the website. If the existing Apps Script project already contains this code and Version 2 is deployed, no new project is needed.

@@ -23,6 +23,23 @@ if (requestedService && serviceSelect) {
   serviceSelect.value = requestedService;
 }
 
+// Prefill the booking form after a successful virtual-photo upload.
+const savedVirtualLead = sessionStorage.getItem("jpcVirtualLead");
+if (savedVirtualLead) {
+  try {
+    const lead = JSON.parse(savedVirtualLead);
+    const nameField = document.querySelector('input[name="name"]');
+    const emailField = document.querySelector('input[name="email"]');
+    const phoneField = document.querySelector('input[name="phone"]');
+    if (nameField && lead.name) nameField.value = lead.name;
+    if (emailField && lead.email) emailField.value = lead.email;
+    if (phoneField && lead.phone) phoneField.value = lead.phone;
+    if (serviceSelect) serviceSelect.value = "Virtual Interior Decoration";
+  } catch (error) {
+    console.error("Could not restore virtual lead details:", error);
+  }
+}
+
 const bookingForm = document.querySelector("#booking-form");
 const formNote = document.querySelector("#form-note");
 
@@ -90,7 +107,7 @@ const fileCount = document.querySelector("#file-count");
 
 // FREE PHOTO EMAIL SETUP:
 // Paste your deployed Google Apps Script Web App URL between the quotation marks.
-const JPC_PHOTO_UPLOAD_ENDPOINT = https://script.google.com/macros/s/AKfycbzOp4_wqqqf1qdeU_EdmSVHkadoncNAnKipYdPcA3YqgFz238LFe5_2YSAB_NmHZsgj/exec
+const JPC_PHOTO_UPLOAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbzOp4_wqqqf1qdeU_EdmSVHkadoncNAnKipYdPcA3YqgFz238LFe5_2YSAB_NmHZsgj/exec";
 
 if (roomPhotos && fileCount) {
   roomPhotos.addEventListener("change", () => {
@@ -170,6 +187,12 @@ if (virtualUploadForm) {
         photos: photoPayload
       };
 
+      sessionStorage.setItem("jpcVirtualLead", JSON.stringify({
+        name: payload.name,
+        email: payload.email,
+        phone: payload.phone
+      }));
+
       await fetch(JPC_PHOTO_UPLOAD_ENDPOINT, {
         method: "POST",
         mode: "no-cors",
@@ -178,7 +201,10 @@ if (virtualUploadForm) {
       });
 
       sessionStorage.setItem("jpcVirtualUploadComplete", "true");
-      window.location.href = "contact.html?service=Virtual%20Interior%20Decoration&photos=received#booking-form";
+      uploadNote.textContent = "Photos sent. Opening the complimentary introduction form...";
+      setTimeout(() => {
+        window.location.href = "contact.html?service=Virtual%20Interior%20Decoration&photos=received#booking-form";
+      }, 1200);
       return;
     } catch (error) {
       console.error(error);
