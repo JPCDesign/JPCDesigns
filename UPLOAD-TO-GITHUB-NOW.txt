@@ -1,0 +1,15 @@
+JPC DESIGN — FINAL GITHUB UPLOAD
+
+This package already contains your Google Apps Script Web App URL. No more code editing is required.
+
+1. Open your GitHub JPCDesigns repository.
+2. Click Add file > Upload files.
+3. Select ALL files inside this folder.
+4. Drag them into GitHub and replace the existing files.
+5. Commit with: Add complete virtual decoration photo upload
+6. Wait for Cloudflare Pages to show a green Success check.
+7. Open your website in a private/incognito window.
+8. You will see Virtual Decoration in the menu.
+9. Open it, upload one small photo, and submit a test.
+
+The photos are sent to jpcdesign1996@gmail.com and the visitor is redirected to the complimentary introduction scheduling form.
