@@ -1,0 +1,25 @@
+JPC DESIGN — COMPLETE WEBSITE + ADS LANDING PAGE
+
+This package restores the regular JPC Design homepage and adds a separate advertising landing page.
+
+UPLOAD TO GITHUB
+1. Unzip this package.
+2. Open the JPCDesigns-main folder.
+3. In GitHub, open your JPCDesigns repository.
+4. Click Add file > Upload files.
+5. Select EVERYTHING inside JPCDesigns-main, including the get-started folder.
+6. Drag the files into GitHub and allow replacement of existing files.
+7. Commit directly to the main branch with: Restore website and add ads landing page
+8. Wait for Cloudflare Pages to finish deployment.
+
+TEST
+Main website: https://www.jpcdesigns.com/
+Ads landing page: https://www.jpcdesigns.com/get-started/
+
+AD LINKS
+TikTok: https://www.jpcdesigns.com/get-started/?utm_source=tiktok&utm_campaign=virtual_decorating
+Facebook: https://www.jpcdesigns.com/get-started/?utm_source=facebook&utm_campaign=virtual_decorating
+Instagram: https://www.jpcdesigns.com/get-started/?utm_source=instagram&utm_campaign=virtual_decorating
+
+The landing-page form is connected to the same Formspree endpoint already used by your website: xqeryagp.
+Submit one test lead after deployment and confirm it reaches jpcdesign1996@gmail.com.
