@@ -65,7 +65,7 @@ function doPost(e) {
         "",
         "JPC Design",
         "727-303-8715",
-        "jpcdesign1996@gmail.com"
+        "JPC Designs Office"
       ].join("\n"),
       name: "JPC Design"
     });
