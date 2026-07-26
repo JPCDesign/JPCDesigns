@@ -1263,3 +1263,13 @@ body .virtual-feature .nationwide-note {
     font-size: clamp(2rem, 9vw, 3rem) !important;
   }
 }
+/* Fix Portfolio heading on Android */
+@media (max-width: 480px) {
+  .portfolio-title {
+    font-size: 34px;
+    line-height: 1.05;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+}
