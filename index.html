@@ -3,12 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JPC Design | Interior Decorator in Tampa Bay & Virtual Nationwide</title>
-  <meta name="description" content="JPC Design provides interior decorating, furniture selection, room styling and virtual decorating services throughout Tampa Bay and nationwide.">
+  <title>JPC Design | Tampa Bay Interior Decorator</title>
+  <meta name="description" content="Interior decoration, furnishing and move-in support in Tampa Bay, with virtual decorating available nationwide.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260726-1">
+  <link rel="stylesheet" href="styles.css?v=20260726-restore">
+  <style>
+    /* Homepage-only adjustment: show more of the first image instead of an overly tight crop. */
+    .hero-restored{min-height:78svh;background-position:center 42%;}
+    @media(min-width:1100px){.hero-restored{background-size:100% auto;background-repeat:no-repeat;background-color:#171513;}}
+    @media(max-width:700px){.hero-restored{min-height:70svh;background-position:center center;}}
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -22,42 +28,63 @@
   </nav>
 </header>
 <main>
-<section class="hero">
+<section class="hero hero-restored">
   <div class="hero-copy">
-    <p class="eyebrow">Interior decoration • Tampa Bay & nationwide</p>
-    <h1>A home that feels beautifully finished—and completely yours.</h1>
-    <p>Personalized furniture, décor, color and layout recommendations for homeowners who want a polished space without costly purchasing mistakes.</p>
+    <p class="eyebrow light-text">Interior decoration • Tampa Bay & nationwide virtually</p>
+    <h1>Beautiful spaces, thoughtfully finished.</h1>
+    <p>Personalized furniture, décor and layout guidance designed around your home, lifestyle and budget.</p>
     <div class="hero-actions">
-      <a class="button gold" href="contact.html">Book a free introduction</a>
-      <a class="button outline" href="portfolio.html">View our work</a>
+      <a class="button gold" href="contact.html">Book a Complimentary Consultation</a>
+      <a class="button light" href="virtual-decoration.html">Start Virtual Decoration</a>
+      <a class="button hero-portfolio-button" href="portfolio.html">View Portfolio</a>
     </div>
   </div>
-  <img src="O4-new.png" alt="Warm modern living room designed by JPC Design">
 </section>
+
 <section class="intro-band">
-  <div><p class="eyebrow">Designed around real life</p><h2>Clear direction before you buy.</h2></div>
-  <p>We help you select the right furniture, lighting, rugs, art and finishing details so every purchase works together in your home.</p>
+  <div>
+    <p class="eyebrow">JPC Design</p>
+    <h2>A clear plan for a home that feels complete.</h2>
+  </div>
+  <p>We help homeowners select furniture, décor, lighting, layouts and finishing details for individual rooms, move-ins, remodels and full homes.</p>
 </section>
+
 <section class="section">
-  <div class="section-heading"><p class="eyebrow">Ways to work with us</p><h2>From one room to your entire home.</h2><p>Choose focused decorating guidance, a complete room plan, move-in support or virtual service from anywhere in the United States.</p></div>
+  <div class="section-heading">
+    <div><p class="eyebrow">Our services</p><h2>Support for every stage of your home.</h2></div>
+    <a href="services.html">See all services</a>
+  </div>
   <div class="service-grid">
-    <article><span>01</span><h3>Virtual Decoration</h3><p>Share photos, measurements and inspiration. Receive personalized furniture, décor and layout recommendations remotely.</p><a href="virtual-decoration.html">Explore virtual service</a></article>
-    <article><span>02</span><h3>Single & Multiple Rooms</h3><p>Create a cohesive, comfortable plan for a living room, bedroom, dining area or several connected spaces.</p><a href="services.html">View services</a></article>
-    <article><span>03</span><h3>Full Home & Move-In</h3><p>Plan furniture, finishes and final styling for a new home or a larger whole-home transformation.</p><a href="packages.html">View packages</a></article>
+    <article><img src="O2.png" alt="Modern living room interior"><h3>Interior Decoration</h3><p>Furniture, lighting, rugs, art and décor selected as one cohesive plan.</p></article>
+    <article><img src="O4-new.png" alt="Modern open living and dining space"><h3>Furnishing & Styling</h3><p>Guidance for empty rooms, new homes and spaces that need a finished look.</p></article>
+    <article class="service-highlight"><span class="mini-badge">Nationwide</span><img src="O7.png" alt="Virtual interior decoration example"><h3>Virtual Decoration</h3><p>Upload your room photos and receive personalized help from anywhere in the United States.</p><a href="virtual-decoration.html">Start your virtual project</a></article>
+    <article><img src="O8.png" alt="Warm modern home interior"><h3>Move-In Support</h3><p>A coordinated plan to help your new home feel comfortable and complete.</p></article>
   </div>
 </section>
+
+<section class="virtual-feature">
+  <div class="virtual-feature-visual"><img src="O5.png" alt="Warm modern interior decoration"><div class="nationwide-note"><strong>Virtual service</strong><span>Available nationwide</span></div></div>
+  <div class="virtual-feature-copy">
+    <p class="eyebrow">Virtual interior decoration</p>
+    <h2>Professional decorating help, wherever you live.</h2>
+    <p>Share photos, measurements, your preferred style and budget. We will help you create a coordinated direction before you spend money on furniture and décor.</p>
+    <div class="virtual-feature-points"><span>Personalized furniture and décor guidance</span><span>Room layout and style direction</span><span>Easy photo upload from your phone</span></div>
+    <div class="virtual-feature-actions"><a class="button gold" href="virtual-decoration.html">Start Virtual Decoration</a><a class="text-link" href="packages.html">View estimated packages</a></div>
+  </div>
+</section>
+
 <section class="feature-project">
-  <img src="O5.png" alt="Modern open-concept living room and kitchen">
-  <div><p class="eyebrow light-text">Thoughtful, practical and personal</p><h2>Beautiful ideas that work in your space and budget.</h2><p>Our recommendations consider scale, comfort, maintenance, timelines and how your family actually uses the home.</p><ul class="check-list"><li>Furniture and décor sourcing</li><li>Room layouts and styling direction</li><li>Color, lighting and finish coordination</li><li>Virtual nationwide or in-person Tampa Bay service</li></ul><a class="button white" href="contact.html">Start with a free introduction</a></div>
+  <img src="O10.png" alt="Completed JPC Design project">
+  <div><p class="eyebrow">Designed around you</p><h2>Make confident choices before you buy.</h2><p>Our goal is to help you avoid costly mistakes and create a home where every piece works together.</p><a class="button dark" href="contact.html">Book a Complimentary Consultation</a></div>
 </section>
-<section class="section trust-section">
-  <div class="section-heading"><p class="eyebrow">A simple process</p><h2>From ideas to a confident decorating plan.</h2></div>
-  <div class="process-grid"><article><span>1</span><h3>Introduction</h3><p>Tell us about your home, taste, goals, timeline and approximate budget.</p></article><article><span>2</span><h3>Plan</h3><p>We create a coordinated direction for layout, furniture, décor and finishing details.</p></article><article><span>3</span><h3>Bring it home</h3><p>Purchase with confidence and complete your space at the pace that works for you.</p></article></div>
-</section>
-<section class="cta"><div><p class="eyebrow light-text">Ready to love your space?</p><h2>Begin with a complimentary design introduction.</h2></div><a class="button white" href="contact.html">Book now</a></section>
+
+<section class="cta"><h2>Ready to create a home that feels beautifully finished?</h2><a class="button white" href="contact.html">Book a Complimentary Consultation</a></section>
 </main>
-<footer class="site-footer"><div><strong>JPC Design</strong><p>Interior decorator, furnishing and move-in support across Tampa Bay and virtually nationwide.</p></div><div><a href="tel:+17273038715">727-303-8715</a><a href="mailto:jpcdesign1996@gmail.com">jpcdesign1996@gmail.com</a></div><p class="copyright">&copy; 2026 JPC Design. All rights reserved.</p></footer>
-<div class="floating-actions"><a class="floating-whatsapp" href="sms:+17273038715?body=Hi%20JPC%20Design%2C%20I%20would%20like%20help%20with%20my%20space.">Text us</a><a class="floating-book" href="contact.html">Book free introduction</a></div>
+<footer class="site-footer">
+  <div><strong>JPC Design</strong><p>Interior decorator, furnishing and move-in support across Tampa Bay and virtually nationwide.</p></div>
+  <div><a href="tel:+17273038715">727-303-8715</a><a href="mailto:jpcdesign1996@gmail.com">jpcdesign1996@gmail.com</a></div>
+  <p class="copyright">&copy; 2026 JPC Design. All rights reserved.</p>
+</footer>
 <script src="script.js?v=20260725-4"></script>
 </body>
 </html>

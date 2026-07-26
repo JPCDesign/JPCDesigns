@@ -1,0 +1,17 @@
+CORRECTED VERSION
+
+This package restores the regular JPC Design website homepage and keeps the advertising landing page separate.
+
+Main website:
+https://www.jpcdesigns.com/
+
+Advertising landing page:
+https://www.jpcdesigns.com/get-started/
+
+Important homepage items restored:
+- Book a Complimentary Consultation
+- Start Virtual Decoration button
+- Original website navigation and page design
+- Wider first hero image framing
+
+Upload everything INSIDE the JPCDesigns-main folder to the root of the GitHub repository.

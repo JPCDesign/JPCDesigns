@@ -1,0 +1,26 @@
+LANDING PAGE CONFIRMATION EMAIL — REQUIRED SETUP
+
+The website files are already connected to your existing Google Apps Script Web App URL.
+To activate the new client confirmation email, update the deployed Apps Script:
+
+1. Go to https://script.google.com and open the JPC Designs photo/email project.
+2. Replace all existing code with the contents of Google-Apps-Script-Code.gs from this ZIP.
+3. Click Save.
+4. Click Deploy > Manage deployments.
+5. Click the pencil/edit icon beside the current Web App deployment.
+6. Under Version, choose New version.
+7. Make sure Execute as is set to Me.
+8. Make sure Who has access is set to Anyone.
+9. Click Deploy and authorize if Google asks.
+
+The existing Web App URL should remain the same.
+
+After setup, when a client submits the advertising landing page:
+- JPC Designs receives the complete lead by email.
+- The client automatically receives a confirmation email.
+- The email directs the client to https://www.jpcdesigns.com/contact.html to choose a preferred date and time for the complimentary introduction call.
+
+TEST AFTER DEPLOYMENT:
+1. Open https://www.jpcdesigns.com/get-started/
+2. Submit a test using an email address you can check.
+3. Confirm that JPC Designs receives the lead and the test client receives the confirmation email.
